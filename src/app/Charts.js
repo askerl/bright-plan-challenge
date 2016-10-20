@@ -1,18 +1,14 @@
 import React from 'react';
 
+import PageHeader from './PageHeader'
 import DonutChart from './DonutChart';
 import Panel from './Panel';
-
 
 const Charts = ( {currentChart, onChangeChart} ) => {
   let input;
   return(
     <div>
-      <div className="row">
-           <div className="col-lg-12">
-               <h1 className="page-header">Portfolio Charts</h1>
-           </div>
-       </div>
+      <PageHeader pageTitle="Portfolio Charts"/>
       <div className="row">
         <div className="col-lg-12">
           <Panel title={`Risk profile: ${currentChart}`}>

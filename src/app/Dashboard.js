@@ -1,16 +1,13 @@
 import React from 'react';
 
+import PageHeader from './PageHeader'
 import DashboardPanel from './DashboardPanel';
 
 const Dashboard = ( ) => {
   let colClass = "col-md-6";
   return(
     <div>
-      <div className="row">
-           <div className="col-lg-12">
-               <h1 className="page-header">Dashboard</h1>
-           </div>
-       </div>
+      <PageHeader pageTitle="Dashboard"/>
       <div className="row">
         <div className={colClass}>
           <DashboardPanel color="primary" icon="fa-pie-chart" num="10" text="New Portfolio Charts!"/>
