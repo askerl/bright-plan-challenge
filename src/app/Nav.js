@@ -10,7 +10,7 @@ const Nav = ( { title } ) => (
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="#">{title}</a>
+          <a className="navbar-brand" href="/">{title}</a>
       </div>
       <ul className="nav navbar-top-links navbar-right">
         <li className="dropdown">
@@ -18,9 +18,9 @@ const Nav = ( { title } ) => (
                 <i className="fa fa-user fa-fw"></i> <i className="fa fa-caret-down"></i>
             </a>
             <ul className="dropdown-menu">
-                <li><a href="/"><i className="fa fa-user fa-fw"></i> User Profile</a>
+                <li><a href="#"><i className="fa fa-user fa-fw"></i> User Profile</a>
                 </li>
-                <li><a href="/"><i className="fa fa-gear fa-fw"></i> Settings</a>
+                <li><a href="#"><i className="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li className="divider"></li>
                 <li><a href="/"><i className="fa fa-sign-out fa-fw"></i> Logout</a>
