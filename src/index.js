@@ -19,13 +19,17 @@ import './index.css';
 // global.jQuery = require('jquery');
 // require('bootstrap')
 
-import Nav from './app/Nav';
-import ChartsContainer from './containers/ChartsContainer';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 
-let title = "Bright Plan LLC";
+// Router
+import { Router, Route, Redirect, browserHistory } from 'react-router';
+
+// Components
+import Layout from './app/Layout';
+import ChartsContainer from './containers/ChartsContainer';
+import Dashboard from './app/Dashboard';
 
 // store
 const logger = createLogger();
@@ -35,22 +39,21 @@ const store = createStore(
 );
 
 const App = () => (
-  <div id="wrapper">
-    <Nav title={title}/>
-    <div id="page-wrapper">
-      <div className="row">
-          <div className="col-lg-12">
-              <h1 className="page-header">Portfolio Charts</h1>
-          </div>
-      </div>
-      <ChartsContainer />
-    </div>
-  </div>
+  <Router history={browserHistory}>
+    <Redirect from="/" to="/charts" />
+    <Route path="/" component={Layout}>
+      <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/charts" component={ChartsContainer}/>
+    </Route>
+  </Router>
 );
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
+  function() {
+    console.timeEnd('react-app')
+  }
 );

@@ -18,12 +18,12 @@ const Nav = ( { title } ) => (
                 <i className="fa fa-user fa-fw"></i> <i className="fa fa-caret-down"></i>
             </a>
             <ul className="dropdown-menu">
-                <li><a href="#"><i className="fa fa-user fa-fw"></i> User Profile</a>
+                <li><a href="/"><i className="fa fa-user fa-fw"></i> User Profile</a>
                 </li>
-                <li><a href="#"><i className="fa fa-gear fa-fw"></i> Settings</a>
+                <li><a href="/"><i className="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li className="divider"></li>
-                <li><a href="#"><i className="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="/"><i className="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
         </li>
@@ -43,13 +43,13 @@ const Nav = ( { title } ) => (
                       </div>
                   </li>
                   <li>
-                      <a href="index.html"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                      <a href="/dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
                   </li>
                   <li>
                       <a href="#"><i className="fa fa-bar-chart-o fa-fw"></i> Charts<span className="fa arrow"></span></a>
                       <ul className="nav nav-second-level">
                           <li>
-                              <a href="#">Portfolio Charts</a>
+                              <a href="/charts">Portfolio Charts</a>
                           </li>
                       </ul>
                   </li>

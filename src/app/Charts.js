@@ -9,6 +9,11 @@ const Charts = ( {currentChart, onChangeChart} ) => {
   return(
     <div>
       <div className="row">
+           <div className="col-lg-12">
+               <h1 className="page-header">Portfolio Charts</h1>
+           </div>
+       </div>
+      <div className="row">
         <div className="col-lg-12">
           <Panel title={`Risk profile: ${currentChart}`}>
             <input
