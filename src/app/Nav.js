@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 const Nav = ( { title } ) => (
 
@@ -10,7 +11,7 @@ const Nav = ( { title } ) => (
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="/">{title}</a>
+          <Link className="navbar-brand" to="/">{title}</Link>
       </div>
       <ul className="nav navbar-top-links navbar-right">
         <li className="dropdown">
@@ -18,12 +19,12 @@ const Nav = ( { title } ) => (
                 <i className="fa fa-user fa-fw"></i> <i className="fa fa-caret-down"></i>
             </a>
             <ul className="dropdown-menu">
-                <li><a href="#"><i className="fa fa-user fa-fw"></i> User Profile</a>
+                <li><Link to="#"><i className="fa fa-user fa-fw"></i> User Profile</Link>
                 </li>
-                <li><a href="#"><i className="fa fa-gear fa-fw"></i> Settings</a>
+                <li><Link to="#"><i className="fa fa-gear fa-fw"></i> Settings</Link>
                 </li>
                 <li className="divider"></li>
-                <li><a href="/"><i className="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><Link to="/"><i className="fa fa-sign-out fa-fw"></i> Logout</Link>
                 </li>
             </ul>
         </li>
@@ -43,13 +44,13 @@ const Nav = ( { title } ) => (
                       </div>
                   </li>
                   <li>
-                      <a href="/dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                      <Link to="/dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</Link>
                   </li>
                   <li>
-                      <a href="#"><i className="fa fa-bar-chart-o fa-fw"></i> Charts<span className="fa arrow"></span></a>
+                      <Link to="#"><i className="fa fa-bar-chart-o fa-fw"></i> Charts<span className="fa arrow"></span></Link>
                       <ul className="nav nav-second-level">
                           <li>
-                              <a href="/charts">Portfolio Charts</a>
+                              <Link to="/charts">Portfolio Charts</Link>
                           </li>
                       </ul>
                   </li>
