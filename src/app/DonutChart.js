@@ -34,7 +34,9 @@ class DonutChart extends React.Component {
 
   render(){
     return(
-      <canvas id="myChart"></canvas>
+      <div id="canvasBox">
+        <canvas id="myChart"></canvas>
+      </div>
     );
   }
 

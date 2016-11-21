@@ -105,3 +105,9 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #BFE3E2;
 }
+
+#canvasBox{
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
+}
