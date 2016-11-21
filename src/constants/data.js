@@ -7,7 +7,7 @@ const allCharts = generateCharts(50, 1000);
 
 export const chartsData = [...allCharts];
 
-// Generate 9 random charts
+// Generate 10 random charts
 function generateCharts(min, max){
 
   let charts = [];
