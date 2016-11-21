@@ -19,7 +19,6 @@ class DonutChart extends React.Component {
             }]
     };
 
-    // And for a doughnut chart
     this.chart = new Chart(ctx, {
         type: 'doughnut',
         data: data
@@ -28,7 +27,7 @@ class DonutChart extends React.Component {
   }
 
   componentWillReceiveProps(props) {
-    this.chart.data.datasets[0].data = chartsData[props.currentChart]; // Would update the first dataset's value of 'March' to be 50
+    this.chart.data.datasets[0].data = chartsData[props.currentChart];
     this.chart.update();
   }
 

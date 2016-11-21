@@ -22,6 +22,7 @@ function generateCharts(min, max){
 
 }
 
+// returns a random number between min and max (inclusive)
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
