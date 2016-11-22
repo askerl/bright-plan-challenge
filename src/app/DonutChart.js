@@ -15,7 +15,7 @@ class DonutChart extends React.Component {
             {
                 data: chartsData[this.props.currentChart],
                 backgroundColor: colors,
-                hoverBackgroundColor: colors
+                // hoverBackgroundColor: colors              
             }]
     };
 
