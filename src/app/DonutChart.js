@@ -15,7 +15,7 @@ class DonutChart extends React.Component {
             {
                 data: chartsData[this.props.currentChart],
                 backgroundColor: colors,
-                // hoverBackgroundColor: colors              
+                // hoverBackgroundColor: colors
             }]
     };
 
@@ -27,7 +27,9 @@ class DonutChart extends React.Component {
   }
 
   componentWillReceiveProps(props) {
+    // set the data of the cart to the current chart selected
     this.chart.data.datasets[0].data = chartsData[props.currentChart];
+    // trigger update method to refresh the chart
     this.chart.update();
   }
 
