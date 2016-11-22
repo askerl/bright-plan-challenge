@@ -9,7 +9,7 @@ let minValue = 50;
 let maxValue = 1000;
 
 // generate charts with values contained in the limits defined
-const allCharts = generateCharts(50, 1000);
+const allCharts = generateCharts(minValue, maxValue);
 
 export const chartsData = [...allCharts];
 

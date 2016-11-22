@@ -15,13 +15,16 @@ class DonutChart extends React.Component {
             {
                 data: chartsData[this.props.currentChart],
                 backgroundColor: colors,
-                // hoverBackgroundColor: colors
+                // hoverBackgroundColor: colors,
             }]
     };
 
     this.chart = new Chart(ctx, {
         type: 'doughnut',
-        data: data
+        data: data,
+        options: {
+          cutoutPercentage: 50
+        }
     });
 
   }
