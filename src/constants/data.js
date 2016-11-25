@@ -4,14 +4,34 @@ export const categories = ['Stocks', 'Bonds', 'ETFs', 'Cash', 'Commodities','Fix
 // define background colors for each category
 export const colors = ['#506C91','#6E9F69','#4E92DF','#FF9135','#FFF092','#D14747'];
 
-// min and max values for every category
-let minValue = 50;
-let maxValue = 1000;
+// initialize allCharts data
+let allCharts = [];
 
-// generate charts with values contained in the limits defined
-const allCharts = generateCharts(minValue, maxValue);
+let randomCharts = true;
+if (randomCharts){
+  // generate random charts
 
+  // min and max values for every category
+  let minValue = 50;
+  let maxValue = 1000;
+
+  // generate charts with values contained in the limits defined
+  allCharts = generateCharts(minValue, maxValue);
+
+} else {
+  // retrieve charts from json data
+  let jsonData = require('../constants/charts.json');
+  for(let i = 0, l = jsonData.length; i < l; i++) {
+      var chart = jsonData[i].chart;
+      allCharts.push(chart);
+  }
+}
+
+// export charts data
 export const chartsData = [...allCharts];
+
+
+// *** AUX FUNCTIONS ***
 
 // Generate 10 random charts
 function generateCharts(min, max){
