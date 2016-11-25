@@ -7,7 +7,7 @@ export const colors = ['#506C91','#6E9F69','#4E92DF','#FF9135','#FFF092','#D1474
 // initialize allCharts data
 let allCharts = [];
 
-let randomCharts = true;
+let randomCharts = false;
 if (randomCharts){
   // generate random charts
 
@@ -21,8 +21,9 @@ if (randomCharts){
 } else {
   // retrieve charts from json data
   let jsonData = require('../constants/charts.json');
-  for(let i = 0, l = jsonData.length; i < l; i++) {
-      var chart = jsonData[i].chart;
+  console.log(jsonData);
+  for(let i = 0, l = jsonData.charts.length; i < l; i++) {
+      let chart = jsonData.charts[i];
       allCharts.push(chart);
   }
 }
