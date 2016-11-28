@@ -3,11 +3,13 @@
 export const categories = ['Stocks', 'Bonds', 'ETFs', 'Cash', 'Commodities','Fixed Income'];
 // define background colors for each category
 export const colors = ['#506C91','#6E9F69','#4E92DF','#FF9135','#FFF092','#D14747'];
+// define quantity of charts
+export const maxCharts = 10;
 
 // initialize allCharts data
 let allCharts = [];
 
-let randomCharts = false;
+let randomCharts = true;
 if (randomCharts){
   // generate random charts
 
@@ -38,7 +40,7 @@ export const chartsData = [...allCharts];
 function generateCharts(min, max){
   // charts is an array of charts
   let charts = [];
-  for (let c=0; c<10; c++){
+  for (let c=0; c<maxCharts; c++){
     // chart is an array of values
     let chart =[];
     // generate as many values as categories
