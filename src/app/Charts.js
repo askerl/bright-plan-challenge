@@ -5,7 +5,7 @@ import DonutChart from './DonutChart';
 import Panel from './Panel';
 
 const Charts = ( {currentChart, onChangeChart} ) => {
-  let input;
+  let sliderInput;
   return(
     <div>
       <PageHeader pageTitle="Portfolio Charts"/>
@@ -14,13 +14,13 @@ const Charts = ( {currentChart, onChangeChart} ) => {
           <Panel title={`Risk profile: ${currentChart}`}>
             <input
               id="risk"
-              ref={(c) => input = c}
+              ref={(elem) => sliderInput = elem}
               type="range"
               min="1"
               max="10"
               step="1"
               defaultValue="1"
-              onChange={() => onChangeChart(input.value)}
+              onChange={() => onChangeChart(sliderInput.value)}
             />
           </Panel>
         </div>
